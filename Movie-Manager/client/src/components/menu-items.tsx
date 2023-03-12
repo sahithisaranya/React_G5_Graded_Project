@@ -1,5 +1,5 @@
-import Container from 'react-bootstrap/Container';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -16,16 +16,20 @@ function MenuItems() {
                     <Nav.Link href="#top-rated">Top rated movies</Nav.Link>
                     <Nav.Link href="#favorites">Favorites</Nav.Link>
                 </Nav>
-                <Form >
+
+                
+                <Form style={{ display: "flex", justifyContent: "right" }}>
+
+                    <FormControl type="text" placeholder="Search movie" className="ml-2 mr-sm-2" />
                     <Button>
                         <FontAwesomeIcon icon={faSearch} />
                     </Button>
 
-                    <FormControl type="text" placeholder="Search movie" className="ml-2 mr-sm-2" />
-                    
                 </Form>
+
             </Navbar.Collapse>
         </Navbar>
+
     );
 }
 
