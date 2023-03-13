@@ -1,11 +1,15 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import DisplayMoviesOnScreen from './components/display-movies';
+import MoviesView from './components/navigate-to-movies';
+import MenuItems from './components/menu-items';
+import IMovie from './models/movie';
 
 function App() {
   return (
     <div className="App">
-     <DisplayMoviesOnScreen/>
+     <MenuItems movies={null}/>
+     <MoviesView/>
+     
     </div>
   );
 }
