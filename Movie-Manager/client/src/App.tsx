@@ -7,9 +7,7 @@ import IMovie from './models/movie';
 function App() {
   return (
     <div className="App">
-     <MenuItems movies={null}/>
      <MoviesView/>
-     
     </div>
   );
 }

@@ -10,6 +10,19 @@ const posterStyle={
     height:"70%"
 };
 
+const searchStyle:React.CSSProperties = {
+    position: "absolute",
+    top: "50%",
+    right: "10px",
+    transform: "translateY(-50%)",
+    padding: "10px",
+    border: "1px solid #ccc",
+    borderRadius: "5px",
+    fontSize: "12px",
+  };
+
+
 
 export{cardTopStyle};
 export{posterStyle};
+export{searchStyle}

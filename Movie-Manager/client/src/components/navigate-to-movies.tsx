@@ -11,7 +11,7 @@ function MoviesView() {
   return (
     <Router>
       <Routes>
-        <Route path="/movies-in-theaters" element={<MoviesInTheatres/>} />
+        <Route path="/" element={<MoviesInTheatres/>} />
         <Route path="/movies-in-theaters" element={<MoviesInTheatres/>} />
         <Route path="/movies-coming" element={<MoviesComing/>} />
         <Route path="/top-rated-india" element={<TopRatedIndia/>}/>
