@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import IMovie from '../models/movie';
 import { getAllMoviesComingUp } from '../services/movie-service';
-import DisplayMovies from "./movie-cards-view";
-import MenuItems from "./menu-items";
+import DisplayMovies from "./views/movie-cards-view";
+import MenuItems from "./views/menu-items";
 
 
 function MoviesComing() {

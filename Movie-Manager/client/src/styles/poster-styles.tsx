@@ -21,8 +21,13 @@ const searchStyle:React.CSSProperties = {
     fontSize: "12px",
   };
 
+  const movieDescPosterStyle={
+    width:"100%",
+    height:"100%"
+  }
 
 
 export{cardTopStyle};
 export{posterStyle};
-export{searchStyle}
+export{searchStyle};
+export{movieDescPosterStyle};

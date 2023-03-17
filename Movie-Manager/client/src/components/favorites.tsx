@@ -1,31 +1,30 @@
 import { useEffect, useState } from "react";
 import IMovie from '../models/movie';
-import { getAllMoviesTopRatedIndia } from '../services/movie-service';
-import DisplayMovies from "./views/movie-cards-view";
+import { getAllMoviesFavorite } from '../services/movie-service';
+import DisplayFavoriteMovies from "./views/favorite-movies-view";
 import MenuItems from "./views/menu-items";
 
-function TopRatedIndia() {
 
+const FavoriteMovies=()=>{
     const [movies, setMovies] = useState<IMovie[]>([]);
 
     const [filteredMovies,setFilteredMovies]=useState<IMovie[]>([]);
 
     useEffect(() => {
-        const invokeGetAllMoviesTopRatedIndia = async () => {
+        const invokeGetAllMoviesFavorite= async () => {
             try {
-                const response = await getAllMoviesTopRatedIndia();
-                console.log("Movies top rated India response = "+response);
+                const response = await getAllMoviesFavorite();
+                console.log("All movies in favorite list = "+response);
                 setMovies(response);
             }
             catch (error) {
                 console.log(error);
             }
         }
-        invokeGetAllMoviesTopRatedIndia();
+        invokeGetAllMoviesFavorite();
     }, []);
 
-   
-     const refreshParentAfterFilter=(newlyCreatedMoviesList:IMovie[])=>{
+    const refreshParentAfterFilter=(newlyCreatedMoviesList:IMovie[])=>{
         setFilteredMovies(newlyCreatedMoviesList);
     }
 
@@ -35,13 +34,13 @@ function TopRatedIndia() {
             <MenuItems movies={movies} refreshParent={refreshParentAfterFilter}></MenuItems>
             {
                 (filteredMovies.length<=0)?(
-                    <DisplayMovies movies={movies} />
+                    <DisplayFavoriteMovies movies={movies} />
                 ):(
-                    <DisplayMovies movies={filteredMovies} />
+                    <DisplayFavoriteMovies movies={filteredMovies} />
                 )
             }
         </div>
     ) ;
 }
 
-export default TopRatedIndia;
+export default FavoriteMovies;

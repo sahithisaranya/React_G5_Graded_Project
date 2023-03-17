@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import IMovie from '../models/movie';
 import { getAllMoviesInTheatres } from '../services/movie-service';
-import MenuItems from "./menu-items";
-import DisplayMovies from "./movie-cards-view";
+import MenuItems from "./views/menu-items";
+import DisplayMovies from "./views/movie-cards-view";
 
 
 function MoviesInTheatres() {
 
     const [movies, setMovies] = useState<IMovie[]>([]);
-
     const [filteredMovies,setFilteredMovies]=useState<IMovie[]>([]);
 
     useEffect(() => {
@@ -29,7 +28,6 @@ function MoviesInTheatres() {
         setFilteredMovies(newlyCreatedMoviesList);
     }
 
-      
     return(
         <div>
             <MenuItems movies={movies} refreshParent={refreshParentAfterFilter}></MenuItems>

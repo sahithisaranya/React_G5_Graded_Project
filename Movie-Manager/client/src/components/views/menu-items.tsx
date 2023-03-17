@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import IMovie from "../models/movie";
-import { searchStyle } from "../styles/poster-styles";
+import IMovie from "../../models/movie";
+import { searchStyle } from "../../styles/poster-styles";
 
 
 type FilterMovieModel = {

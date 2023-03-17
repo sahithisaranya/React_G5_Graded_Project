@@ -1,6 +1,6 @@
 import IMovie from "../models/movie";
 import React, { useState } from "react";
-import DisplayMovies from "./movie-cards-view";
+import DisplayMovies from "./views/movie-cards-view";
 
 
 type FilterMovieModel = {
