@@ -19,7 +19,7 @@ function MoviesView() {
         <Route path="/top-rated-india" element={<TopRatedIndia/>}/>
         <Route path="/top-rated-movies" element={<TopRatedMovies/>}/>
         <Route path="/favorites" element={<FavoriteMovies/>}/>
-        <Route path="/movie-description" element={<MovieDescription movie={null}/>}/>
+        <Route path="/movie-description" element={<MovieDescription/>}/>
       </Routes>
     </Router>
   );

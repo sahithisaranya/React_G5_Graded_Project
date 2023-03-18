@@ -65,7 +65,7 @@ function DisplayMovies({ movies }: Props) {
     const handleCardClick=(movie:IMovie)=>{
         console.log("movie desc component called");
         {
-            navigate("/movie-description");
+            navigate("/movie-description",{state:{currentMovie:movie}});
         }
     }
 

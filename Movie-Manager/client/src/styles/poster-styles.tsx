@@ -21,9 +21,23 @@ const searchStyle:React.CSSProperties = {
     fontSize: "12px",
   };
 
+  const movieDescCardStyle={
+    width: "15rem",
+    height: "25rem",
+    top: '30px',
+    left:'70px'
+  }
+
   const movieDescPosterStyle={
-    width:"100%",
-    height:"100%"
+    width: "15rem",
+    height: "25rem",
+    top: '100px',
+    left:'70px'
+  }
+
+  const movieDescPosterImgStyle={
+    width:"40rem",
+    height:"75rem"
   }
 
 
@@ -31,3 +45,5 @@ export{cardTopStyle};
 export{posterStyle};
 export{searchStyle};
 export{movieDescPosterStyle};
+export{movieDescCardStyle};
+export{movieDescPosterImgStyle};
