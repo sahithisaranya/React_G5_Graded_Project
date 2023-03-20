@@ -1,9 +1,7 @@
-import IMovie from "../../models/movie"
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Link, useLocation } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import { movieDescCardStyle, movieDescPosterStyle } from "../../styles/poster-styles";
 
 const MovieDescription = () => {
     const location = useLocation();
@@ -68,25 +66,6 @@ const MovieDescription = () => {
                     </Col>
                 </Row>
             </Card>
-
-            {/* //     <Row md={2} className="g-4">
-                //         <Col>
-                //             <Card key={currentMovie.id} style={movieDescCardStyle}>
-                //                 <Card.Img variant='top' src={process.env.PUBLIC_URL + '/Images/' + currentMovie.poster} alt={currentMovie.title} style={movieDescPosterStyle} />
-                //             </Card>
-                //         </Col>
-
-                //         <Col>
-                //             <div>
-                //                 <p style={{ fontWeight: 'bold', fontSize: '30px' }}>{currentMovie.title}({currentMovie.year})</p>
-                //                 
-                //             </div>
-                //         </Col>
-
-
-                //     </Row> */}
-
-
         </>
     );
 }

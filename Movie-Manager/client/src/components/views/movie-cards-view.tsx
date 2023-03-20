@@ -10,7 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { getAllMoviesFavorite, postFavoriteMovie } from "../../services/movie-service";
 import { useState } from "react";
-import MovieDescription from "./movie-description-view";
 import {useNavigate} from "react-router-dom";
 
 
